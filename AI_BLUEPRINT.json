@@ -1,0 +1,137 @@
+{
+  "mode": "ai",
+  "project_title": "Human Resources Evidence Review Simple RAG",
+  "short_description": "A beginner-friendly RAG project for Human Resources Evidence Review",
+  "domain_summary": "Human Resources Evidence Review involves analyzing employee data to identify trends, risks, and opportunities for improvement. This project aims to develop a simple RAG (Red, Amber, Green) system to categorize employee performance based on evidence.",
+  "user_persona": "HR Analyst: An HR professional responsible for analyzing employee data and making informed decisions.",
+  "architecture_notes": [
+    "The architecture is designed to be scalable, secure, and maintainable. Each service is containerized using Docker to ensure consistency and ease of deployment."
+  ],
+  "backend_modules": [
+    "data_ingestion_service: Handles data ingestion from various sources (e.g., CSV, JSON).",
+    "data_processing_service: Processes and analyzes employee data to generate RAG scores."
+  ],
+  "frontend_features": [
+    "employee_dashboard: Displays employee performance data and RAG scores.",
+    "risk_analysis: Provides insights into high-risk employees and trends."
+  ],
+  "data_sources": [
+    "employee_data: Employee performance data from HR systems or CSV files."
+  ],
+  "testing_strategy": [
+    "Unit testing and integration testing using Pytest and Docker Compose."
+  ],
+  "starter_questions": [
+    "What is the purpose of the RAG system?",
+    "What data sources will be used?",
+    "How will employee performance be measured?"
+  ],
+  "workflow_steps": [
+    "Data ingestion",
+    "Data processing",
+    "Data visualization",
+    "Risk analysis"
+  ],
+  "business_rules": [
+    "high_risk_employee: Employees with RAG scores above 70 are considered high-risk.",
+    "trend_detection: Identify trends in employee performance over time."
+  ],
+  "sample_documents": [
+    {
+      "filename": "employee_data.csv",
+      "content": "Name,Age,Department,Performance Score\nJohn,30,Marketing,80\nJane,25,Sales,90\nBob,40,IT,70"
+    },
+    {
+      "filename": "RAG_scores.json",
+      "content": "{\"John\": 80, \"Jane\": 90, \"Bob\": 70}"
+    }
+  ],
+  "tool_catalog": [
+    {
+      "name": "Docker",
+      "description": "Containerization platform for deploying microservices."
+    },
+    {
+      "name": "FastAPI",
+      "description": "Python web framework for building APIs."
+    },
+    {
+      "name": "React",
+      "description": "JavaScript library for building user interfaces."
+    }
+  ],
+  "agent_plan": [
+    {
+      "name": "Architecture Agent",
+      "role": "Define app boundaries, data flow, runtime stack, and integration points.",
+      "outputs": [
+        "The architecture is designed to be scalable, secure, and maintainable. Each service is containerized using Docker to ensure consistency and ease of deployment."
+      ]
+    },
+    {
+      "name": "Backend Agent",
+      "role": "Design FastAPI modules, service contracts, validation, and error handling.",
+      "outputs": [
+        "data_ingestion_service: Handles data ingestion from various sources (e.g., CSV, JSON).",
+        "data_processing_service: Processes and analyzes employee data to generate RAG scores."
+      ]
+    },
+    {
+      "name": "Frontend Agent",
+      "role": "Design React screens, state flow, controls, and user feedback states.",
+      "outputs": [
+        "employee_dashboard: Displays employee performance data and RAG scores.",
+        "risk_analysis: Provides insights into high-risk employees and trends."
+      ]
+    },
+    {
+      "name": "Database Agent",
+      "role": "Design persistence models, sample data, indexes, and audit records.",
+      "outputs": [
+        "Run history",
+        "Source document metadata",
+        "Generated workflow audit records"
+      ]
+    },
+    {
+      "name": "Testing Agent",
+      "role": "Define contract tests, smoke tests, and generated project validation.",
+      "outputs": [
+        "Unit testing and integration testing using Pytest and Docker Compose."
+      ]
+    },
+    {
+      "name": "DevOps Agent",
+      "role": "Define environment variables, Docker workflow, and repository packaging.",
+      "outputs": [
+        "Docker-ready project",
+        "Environment sample file",
+        "GitHub repository upload"
+      ]
+    },
+    {
+      "name": "Reviewer Agent",
+      "role": "Review the generated plan for completeness, security, and portfolio quality.",
+      "outputs": [
+        "Data ingestion",
+        "Data processing",
+        "Data visualization",
+        "Risk analysis"
+      ]
+    }
+  ],
+  "model_provider": "groq",
+  "model_name": "llama-3.1-8b-instant",
+  "fallback_reason": null,
+  "architecture": "PDF FAQ Knowledge Bot",
+  "architecture_template_id": 2,
+  "architecture_template_path": "templates/simple-rag/pdf-faq-knowledge-bot",
+  "architecture_description": "PDF FAQ Knowledge Bot for answering repeat questions from uploaded documents.",
+  "validation_pipeline": [
+    "pytest",
+    "npm install",
+    "npm run build",
+    "docker compose config",
+    "docker compose build"
+  ]
+}
